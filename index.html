@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+ <title>WEKTORY W MATEMATYCZNO - FIZYCZYM UJĘCIU</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Mateusz Banaszczyk 3ib">
+  <meta name="reply-to" content="mateusz.banaszczyk.dg@gmail.com">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="search.css">
+  <link rel="icon" href="favicon.ico">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+<nav>
+ <ul class="flex-menu">
+   <li><a href="#definicja">Definicja</a></li>
+   <li><a href="#wlasnosci">Własności</a></li>
+   <li><a href="#kalkulator">Kalkulator</a></li> 
+   <li><a href="#kontakt">Kontakt</a></li>
+   <li><a><input type="text" id="search" value placeholder="Search..."></a></li>
+   <li><a id="date"></a></li>
+ </ul>
+</nav>
+
+<script>
+const today = new Date();
+const locales = 'pl-PL';
+const options = { day: 'numeric', month: 'long', year: 'numeric' };
+const formattedDate = today.toLocaleDateString(locales, options);
+
+document.getElementById("date").innerHTML = formattedDate;
+</script>
+
+<div id="welcome">
+ <h3>WEKTORY W MATEMATYCZNO - FIZYCZYM UJĘCIU</h3>
+</div>
+
+<header id="definicja">
+ <div><span>|</span>Definicja</div>
+</header>
+
+<section>
+
+<article class="flex-section">
+ <div>
+  <p>Jest to obiekt matematyczny opisywany za pomocą wielkości: modułu, kierunku wraz ze zwrotem; istotny przede wszystkim w matematyce elementarnej, inżynierii i fizyce.</p>
+  <p>Wiele działań algebraicznych na liczbach rzeczywistych ma swoje odpowiedniki dla wektorów: mogą być one dodawane, odejmowane, mnożone przez liczbę i odwracane. Operacje te spełniają znane prawa algebraiczne: przemienności, łączności, rozdzielności. Suma dwóch wektorów o tym samym początku może być znaleziona geometrycznie za pomocą reguły równoległoboku. Mnożenie przez liczbę, w tym kontekście nazywaną zwykle skalarem, zmienia moduł wektora, tzn. rozciąga go lub ściska zachowując jego kierunek oraz jeżeli liczba jest dodatnia zachowuje zwrot, a gdy ujemna zmienia zwrot wektora.</p>
+  <p>Współrzędne kartezjańskie są spójnym środkiem opisu wektorów i operacji na nich. Wektor staje się ciągiem liczb rzeczywistych nazywanymi składowymi skalarnymi. Dodawanie wektorów i mnożenie wektora przez skalar są wykonywane składowa po składowej.</p>
+  <p>Wektory odgrywają ważną rolę w fizyce: prędkość oraz przyspieszenie poruszającego się obiektu oraz siła działająca na ciało mogą być opisane za pomocą wektorów. Wiele innych wielkości fizycznych może być rozpatrywanych jako wektory. Matematyczna reprezentacja wektora fizycznego zależy od układu współrzędnych wykorzystanego do jego opisu. Inne obiekty podobne wektorom, które opisują wielkości fizyczne i ulegają przekształceniom w podobny sposób wraz ze zmianą układu współrzędnych to pseudowektory i tensory.</p>
+ </div>
+ <img src="images/wektor.png" width="100%" alt="wektor.png">
+</article>
+
+</section>
+
+<hr>
+
+<header id="wlasnosci">
+ <div><span>|</span>Własności</div>
+</header>
+
+<section>
+
+<article>
+ <p>W tej sekcji wykorzystywany jest układ współrzędnych kartezjańskich z wektorami bazowymi:</p>
+ <img src="images/3241b460ec3de1aab9e05e626b9f10941267c4b7.svg" width="25%" alt="wzor">
+ <p>przy czym przyjmuje się, że wszystkie wektory mają początek układu za wspólny punkt zaczepienia. Wektor <b>a</b> będzie zapisywany jako:</p>
+ <img src="images/e82965180666305164f1fd99da5f36dad54e8e26.svg" width="17%" alt="wzor">
+</article>
+
+<article>
+ <h3>Równość</h3>
+ <p>Dwa wektory są równe, jeżeli mają równe wartości i kierunki (wraz ze zwrotami). Równoważnie będą one równe, jeśli odpowiadające współrzędne tych wektorów będą równe. Tak więc dwa wektory:</p>
+ <img src="images/e82965180666305164f1fd99da5f36dad54e8e26.svg" width="17%" alt="wzor">
+ <p>oraz</p>
+ <img src="images/a83544fa746389294a413cbaafebe8f5dad13d91.svg" width="17%" alt="wzor">
+ <p>są równe, jeżeli:</p>
+ <img src="images/e8c23bcbc01adf23055e4dcf3810716a7641063f.svg" width="25%" alt="wzor">
+</article>
+
+<article>
+ <h3>Dodawanie i odejmowanie</h3>
+ <p>Suma wektorów <b>a</b> i <b>b</b> to wektor dany wzorem:</p>
+ <img src="images/a3682ea299d3f0678c45b23ac9c850c30221a502.svg" width="30%" alt="wzor">
+ <p>Dodawanie może być przedstawione graficznie jako umieszczenie punktu początkowego strzałki <b>b</b> w punkcie końcowym strzałki <b>a</b>, następnie narysowanie strzałki od punktu początkowego <b>a</b> do punktu końcowego <b>b</b>. Narysowana strzałka przedstawia wektor <b>a+b</b> jak pokazano niżej:</p>
+ <img src="images/375px-Vector_addition.svg.png" width="25%" alt="wektory-graficznie" style="display: block; margin: 0 auto;">
+ <p>Ten sposób dodawania nazywana jest niekiedy metodą równoległoboku, ponieważ <b>a</b> i <b>b</b> są bokami równoległoboku, natomiast <b>a+b</b> jest jedną z jego przekątnych. Jeżeli <b>a</b> i <b>b</b> są wektorami zaczepionymi o tym samym punkcie zaczepienia, to będzie on również punktem zaczepienia <b>a+b</b>. Można sprawdzić geometrycznie, iż <b>a + b = b + a</b>  oraz <b>(a + b) + c =a + (b + c).</b></p>
+ <p>Różnica a i b dana jest jako:</p>
+ <img src="images/3bb76515e11d90d5c929eccdc1185530a18d6fee.svg" width="30%" alt="wzor">
+ <p>Odejmowanie dwóch wektorów może być zdefiniowane geometrycznie w następujący sposób: aby odjąć <b>b</b> od <b>a</b> należy umieścić początki <b>a</b> i <b>b</b> w tym samym punkcie, a następnie narysować strzałkę od punktu końcowego <b>b</b> do punktu końcowego <b>a</b>. Strzałka ta reprezentuje wektor <b>a-b</b> jak pokazano niżej:</p>
+ <img src="images/Vector_subtraction.svg.png" width="17%" alt="wektory-graficznie" style="display: block; margin: 0 auto;">
+</article>
+
+<article>
+ <h3>Mnożenie przez skalar</h3>
+ <p>Wektor może być również pomnożony lub przeskalowany za pomocą liczby rzeczywistej <b>r</b>. W kontekście standardowej algebry wektorów liczby te nazywane są często skalarami (od skalowania), aby odróżnić je od wektorów. Działanie mnożenia wektora przez skalar nazywane jest czasem mnożeniem skalarnym. Wektor wynikowy to:</p>
+ <img src="images/4a6af27c3cb5dbb6d4a2d3a24156647daf72b9cd.svg" width="25%" alt="wzor">
+ <p>Intuicyjnie mnożenie przez skalar <b>r</b> rozciąga wektor o współczynnik równy <b>r</b>. Geometrycznie może to być przedstawione (przynajmniej w przypadku, gdy <b>r</b> jest całkowite) przez umieszczenie <b>r</b> kopii wektora w linii tak, by punkt końcowy jednego wektora był punktem początkowym kolejnego.</p>
+ <p>Jeżeli <b>r</b> jest ujemne, to zmienia się kierunek (zwrot) wektora: obraca się on o kąt 180°. Niżej znajdują się dwa przykłady (dla <b>r=-1</b> i <b>r=2</b>):</p>
+ <img src="images/Scalar_multiplication_of_vectors2.svg.png" width="17%" alt="wektory-graficznie">
+ <p>Mnożenie skalarne wektora o współczynniku 3 rozciąga wektor:</p>
+ <img src="images/330px-Scalar_multiplication_by_r=3.svg.png" width="17%" alt="wektory-graficznie">
+ <p>Mnożenie przez skalar jest rozdzielne względem dodawania wektorów następującym sensie: <b>r(a + b) = ra + rb</b>, dla dowolnych wektorów <b>a</b>, <b>b</b> oraz wszystkich skalarów <b>r</b>.</p>
+ <p>Można pokazać, że <b>a - b = a + (-1)b.</b></p>
+</article>
+
+<article>
+ <h3>Iloczyn Skalarny</h3>
+ <p>Iloczyn skalarny może być zdefiniowany jako suma iloczynów składowych każdego wektora:</p>
+ <img src="images/44ce07b770fcc78bba136f6d7386d8255dfdc24a.svg" width="20%" alt="wzor">
+</article>
+
+<article>
+ <h3>Długość</h3>
+ <p>Długość, moduł lub norma wektora a jest oznaczana symbolem <b>‖a‖</b> lub rzadziej <b>|a|</b>. Nie powinno się tego mylić z wartością bezwzględną ("normą" skalarną). Czasami błędnie nazywana jest wartością wektora.</p>
+ <p>Długość wektora <b>a</b> może być obliczona za pomocą normy euklidesowej.</p>
+ <img src="images/3d8e49925b71305cd50d635964d3f85dc9c50e42.svg" width="15%" alt="wzor">
+</article>
+
+<article>
+ <h3>Wektor zerowy</h3>
+ <p>Wektor zerowy to wektor o długości <b>zero</b>, zapisany jako (0, 0, 0). Można go zapisać jako <b>0</b>. Nie ma on kierunku i nie może być znormalizowany. Suma wektora zerowego i dowolnego wektora <b>a</b> jest równa <b>a</b>, tj. <b>0 + a = a</b>.</p>
+</article>
+
+<article>
+ <h3>Iloczyn wektorowy</h3>
+ <p>Iloczyn wektorowy może być zapisany jako:</p>
+ <img src="images/4cb99c18992185e20ef21f0584ba7375ec1e0826.svg" width="37%" alt="wzor">
+</article>
+
+</section>
+
+<hr>
+
+<header id="kalkulator">
+ <div><span>|</span>Kalkulator</div>
+</header>
+
+<section>
+
+<article>
+ <h3>Dodawanie</h3>
+ <p><img src="images/dodawanie.png" width="25%" alt="wzor"></p>
+ <input type="number" placeholder="ux" id="dodawanie_xa" value="">
+ <input type="number" placeholder="uy" id="dodawanie_ya" value="">
+ <input type="number" placeholder="vx" id="dodawanie_xb" value="">
+ <input type="number" placeholder="xy" id="dodawanie_yb" value="">
+ <button onclick="dodawanie()">Oblicz</button>
+ <p id="dodawanie_x"></p>
+ <p id="dodawanie_y"></p>
+</article>
+
+<article>
+ <h3>Odejmowanie</h3>
+ <p><img src="images/odejmowanie.png" width="25%" alt="wzor"></p>
+ <input type="number" placeholder="ux" id="odejmowanie_xa" value="">
+ <input type="number" placeholder="uy" id="odejmowanie_ya" value="">
+ <input type="number" placeholder="vx" id="odejmowanie_xb" value="">
+ <input type="number" placeholder="xy" id="odejmowanie_yb" value="">
+ <button onclick="odejmowanie()">Oblicz</button>
+ <p id="odejmowanie_x"></p>
+ <p id="odejmowanie_y"></p>
+</article>
+
+<article>
+ <h3>Mnożenie</h3>
+ <p><img src="images/mnozenie.png" width="20%" alt="wzor"></p>
+ <input type="number" placeholder="k"id="czynnik" value="">
+ <input type="number" placeholder="ux" id="mnozenie_x" value="">
+ <input type="number" placeholder="uy" id="mnozenie_y" value="">
+ <button onclick="mnozenie()">Oblicz</button>
+ <p id="kx"></p>
+ <p id="ky"></p>
+</article>
+
+<article>
+ <h3>Iloczyn Skalarny</h3>
+ <p><img src="images/iloczyn.png" width="15%" alt="wzor"></p>
+ <input type="number" placeholder="ux" id="iloczyn_xa" value="">
+ <input type="number" placeholder="uy" id="iloczyn_ya" value="">
+ <input type="number" placeholder="vx" id="iloczyn_xb" value="">
+ <input type="number" placeholder="vy" id="iloczyn_yb" value="">
+ <button onclick="iloczyn()">Oblicz</button>
+ <p id="iloczyn"></p>
+</article>
+
+<article>
+ <h3>Długość</h3>
+ 
+ <p><img src="images/dlugosc.png" width="10%" alt="wzor"></p>
+ <input type="number" placeholder="ux" id="dlugosc_x" value="">
+ <input type="number" placeholder="uy" id="dlugosc_y" value="">
+ <button onclick="dlugosc()">Oblicz</button>
+ <p id="dlugosc"></p>
+ 
+ <p><img src="images/dlugosc-ab.png" width="20%" alt="wzor"></p>
+ <input type="number" placeholder="xa" id="dlugosc_xa" value="">
+ <input type="number" placeholder="ya" id="dlugosc_ya" value="">
+ <input type="number" placeholder="xb" id="dlugosc_xb" value="">
+ <input type="number" placeholder="yb" id="dlugosc_yb" value="">
+ <button onclick="ab()">Oblicz</button>
+ <p id="ab"></p>
+</article>
+
+</section>
+
+<hr>
+
+<footer>
+ <ul class="flex-footer" id="kontakt" style="background-color: #202020; padding:25px;">
+  <span><li><a href="mailto:mateusz.banaszczyk.dg@gmail.com"><b>Email Address:</b> mateusz.banaszczyk.dg@gmail.com</a></li></span>
+  <span><li><a href="tel:+48507652818"><b>Phone Number:</b> +48 507 652 818</a></li></span>
+ </ul>
+ <ul class="flex-footer">
+  <li><a href="info.txt">Informacje</a></li>
+  <li><a href="images">Zdjęcia</a></li>
+  <li><a href="https://pl.wikipedia.org/wiki/Wektor">Źródło</a></li>
+  <li><a href="#definicja">Definicja</a></li>
+  <li><a href="#wlasnosci">Własności</a></li>
+  <li><a href="#kalkulator">Kalkulator</a></li>
+ </ul>
+ <p><b>Copyright © 2023 Mateusz Banaszczyk.</b> The content is sourced from Wikipedia.</p>
+</footer>
+
+</body>
+</html>

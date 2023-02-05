@@ -1,0 +1,3 @@
+1. Everything is resourced from: https://www.wikipedia.org/
+2. File favicon.ico is made with: https://www.favicon.cc/ favicons creater
+3. Notepad++ https://notepad-plus-plus.org/ 

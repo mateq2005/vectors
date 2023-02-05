@@ -1,0 +1,33 @@
+footer {
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+footer p {
+  padding: 10px;
+  text-align: center;
+}
+
+footer ul {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+span li a:hover {
+  background-color: #606060;	
+}
+
+.flex-footer {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: flow;
+  justify-content: space-around;
+}
+
+@media (max-width: 800px) {
+  .flex-footer {
+    flex-direction: column;
+  }
+}
